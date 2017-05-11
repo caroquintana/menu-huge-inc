@@ -16,10 +16,47 @@ nav {
 
 
 /*Menu bar logo and menu bar style general*/
-.logo,
-.menu {
+.logo{
+	max-width: 30%;
+  display: block;
+  margin-right: auto;
+}
+.menu1{
 	position: absolute;
 	z-index: 2000;
+	top: 0;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin:2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
+}
+
+.menu2{
+	position: absolute;
+	z-index: 2000;
+	top: 10px;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin:2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
+}
+.menu3{
+	position: absolute;
+	z-index: 2000;
+	top: 20px;
+	right: 0;
+	height: 4px;
+	width: 24px;
+	text-align: right;
+	margin:2rem 2rem;
+	background: #ec008c;
+	transition: all 0.3s;
 }
 
 .logo{
@@ -31,5 +68,14 @@ nav {
 	text-align: left;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	background-image: url();
+	background-image: url(../image/huge.png);
+	background-size: 70px, 10px;
+}
+
+#toggle:hover:menu1:before{
+	top: -9px;
+}
+
+#toggle:hover:menu1:after {
+	top: 9px;
 }
