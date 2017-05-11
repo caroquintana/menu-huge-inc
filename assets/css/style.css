@@ -16,12 +16,8 @@ nav {
 
 
 /*Menu bar logo and menu bar style general*/
-.logo{
-	max-width: 30%;
-  display: block;
-  margin-right: auto;
-}
-.menu1{
+
+.menu{
 	position: absolute;
 	z-index: 2000;
 	top: 0;
@@ -34,30 +30,6 @@ nav {
 	transition: all 0.3s;
 }
 
-.menu2{
-	position: absolute;
-	z-index: 2000;
-	top: 10px;
-	right: 0;
-	height: 4px;
-	width: 24px;
-	text-align: right;
-	margin:2rem 2rem;
-	background: #ec008c;
-	transition: all 0.3s;
-}
-.menu3{
-	position: absolute;
-	z-index: 2000;
-	top: 20px;
-	right: 0;
-	height: 4px;
-	width: 24px;
-	text-align: right;
-	margin:2rem 2rem;
-	background: #ec008c;
-	transition: all 0.3s;
-}
 
 .logo{
 	left: 0;
@@ -72,10 +44,93 @@ nav {
 	background-size: 70px, 10px;
 }
 
-#toggle:hover:menu1:before{
+.menu:before, .menu:after{
+	content: '';
+	display: block;
+	width: 24px;
+	height: 4px;
+	background: #ec008c;
+	position: absolute;
+	z-index: -1;
+}
+.menu:before{
+	top: -8px;
+}
+.menu:after{
+	top: 8px;
+}
+#toggle:hover .menu:before{
 	top: -9px;
 }
-
-#toggle:hover:menu1:after {
+#toggle:hover .menu:after{
 	top: 9px;
 }
+#toggle{
+	width: 104px;
+	height: 74px;
+	padding: 45px 40px;
+	z-index: 1000;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.open .menu {
+	background: none !important;
+}
+.open .menu:after{
+	top: 0 !important;
+	background: #fff !important;
+	transform: rotate(45deg);
+}
+.open .menu:before{
+	top: 0 !important;
+	background: #fff !important;
+	transform: rotate(-45deg);
+}
+nav .nav-background{
+	top: 0px;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1500;
+	display: table;
+	background: none;
+	position: absolute;
+	transition: background-color 0.6s cubic-beizer(0.7, 0.01, 0.3, 1);
+}
+nav.open .nav-background{
+	opacity: 1;
+	background-color: rgba(217, 40, 130, 0.9) !important;
+	transition: background-color 0.6s cubic-beizer(0.7, 0.01, 0.3, 1);
+}
+nav.open{
+	height: 100%;
+	transition: none;
+	-o-transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+}
+nav ul{
+	top: 10%;
+	padding: 0;
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	visibility: hidden;
+	display: table-cell;
+	vertical-align: middle;
+	transform: perspective(600px) rotateX(10deg);
+	transition: all 0.5s cubic-beizer(0.7, 0, 0.36, 0.63);
+}
+nav ul li{
+	visibility: hidden;
+}
+
+
+
+
+
