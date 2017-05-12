@@ -37,7 +37,7 @@ nav {
 	top: -4px;
 	width: 70px;
 	height: 74px;
-	padding: 8.4% 2%;
+	padding: 0.4% 2%;
 	text-align: left;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -90,14 +90,13 @@ nav {
 .open .menu:before{
 	top: 0 !important;
 	background: #fff !important;
-	transform: rotate(-45deg);
+	transform: rotate(45deg);
 }
 nav .nav-background{
-	top: 0px;
+	top: 0;
 	opacity: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 1500;
 	display: table;
 	background: none;
 	position: absolute;
@@ -116,7 +115,7 @@ nav.open{
 	-webkit-transition: none;
 }
 nav ul{
-	top: 10%;
+	top: -10%;
 	padding: 0;
 	opacity: 0;
 	width: 100%;
@@ -137,18 +136,18 @@ nav ul li a{
 	padding: 8px 0 0;
 	letter-spacing: -0.06em;
 }
-nav ul li a{
+nav ul li a:hover{
 	color:#ec008c;
 	background-color: white;
 }
-nav.open ul{
+.open ul{
 	top: 0;
 	opacity: 1;
 	margin-top: 0;
 	visibility: visible;
 	transform: perspective(600px) rotateX(0deg);
 }
-nav.open ul li{
+.open ul li{
 	color:#fff;
 	font-size: 60px;
 	visibility: visible !important;
@@ -168,9 +167,7 @@ nav.header-in{
 nav.solid #logo .logo{
 	background-image: ;
 }
-.overflow-hidden{
-	overflow:hidden;
-}
+
 
 
 
