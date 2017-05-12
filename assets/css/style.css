@@ -17,7 +17,7 @@ nav {
 
 /*Menu bar logo and menu bar style general*/
 
-.logo,
+
 .menu{
 	position: absolute;
 	z-index: 2000;
@@ -167,7 +167,9 @@ nav.header-in{
 nav.solid #logo .logo{
 	background-image: ;
 }
-
+.overflow-hidden{
+	overflow:hidden;
+}
 
 
 
